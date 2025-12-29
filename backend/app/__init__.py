@@ -16,7 +16,16 @@ def create_app():
     print(f"MongoDB URI: {app.config.get('MONGO_URI')}")
     if mongo.db is None:
         print("ERROR: PyMongo failed to connect. Check your MONGO_URI and MongoDB server.")
-    CORS(app, resources={r"/api/*": {"origins": Config.CORS_ORIGINS}})
+    
+    # CORS configuration with proper headers
+    CORS(app, resources={
+        r"/api/*": {
+            "origins": Config.CORS_ORIGINS,
+            "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+            "allow_headers": ["Content-Type", "Authorization"],
+            "supports_credentials": True
+        }
+    })
 
     from app.routes.auth import auth_bp
     app.register_blueprint(auth_bp, url_prefix="/api/auth")

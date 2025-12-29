@@ -53,7 +53,9 @@ function StartupScreen({ onReady, backendUrl }) {
           controller.abort();
         }, 5000); // 5 second timeout per request
 
-        const healthUrl = `${backendUrl}/api/health`;
+        // Remove trailing slash from backendUrl if present
+        const baseUrl = backendUrl.replace(/\/$/, '');
+        const healthUrl = `${baseUrl}/api/health`;
         console.log('Checking backend health at:', healthUrl);
         
         fetch(healthUrl, { 

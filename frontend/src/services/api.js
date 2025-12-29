@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE = process.env.REACT_APP_API_BASE_URL || 'https://prompt-pilot-backend.onrender.com';
+// Remove trailing slash if present
+const API_BASE = (process.env.REACT_APP_API_BASE_URL || 'https://prompt-pilot-backend.onrender.com').replace(/\/$/, '');
 
 export const api = axios.create({
   baseURL: API_BASE,

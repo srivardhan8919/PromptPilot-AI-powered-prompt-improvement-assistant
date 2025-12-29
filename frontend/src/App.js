@@ -37,7 +37,7 @@ function App() {
   console.log('API Base from env:', process.env.REACT_APP_API_BASE_URL);
 
   const [showStartup, setShowStartup] = React.useState(true);
-  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+  const backendUrl = process.env.REACT_APP_API_BASE_URL;
 
   return (
     <AuthProvider>

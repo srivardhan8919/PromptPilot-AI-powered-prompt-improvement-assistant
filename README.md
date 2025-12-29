@@ -221,7 +221,6 @@ sequenceDiagram
    Create a `.env` file in the `frontend/` directory:
    ```env
    REACT_APP_API_BASE_URL=http://localhost:5000
-   REACT_APP_BACKEND_URL=http://localhost:5000
    ```
 
 4. **Start development server**

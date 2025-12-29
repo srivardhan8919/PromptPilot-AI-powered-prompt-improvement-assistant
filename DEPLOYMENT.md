@@ -62,7 +62,6 @@ build
 **Environment Variables (Frontend):**
 ```
 REACT_APP_API_BASE_URL=https://your-backend-name.onrender.com
-REACT_APP_BACKEND_URL=https://your-backend-name.onrender.com
 ```
 
 **Important Notes:**
@@ -89,7 +88,6 @@ GROQ_API_KEY=your-groq-api-key
 **Frontend (Render Environment Variables):**
 ```env
 REACT_APP_API_BASE_URL=https://your-backend.onrender.com
-REACT_APP_BACKEND_URL=https://your-backend.onrender.com
 ```
 
 ### Example URLs:
